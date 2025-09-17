@@ -56,15 +56,16 @@ export default function ProjectsSection() {
                 <video controls className="w-full h-40 object-cover rounded-lg">
                     <source src={project.video} type="video/mp4" />
                 </video>
-                ) : (
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={250}
-                    className="rounded-lg object-cover"
-                />
-                )}
+                ) :  project.image ? (
+                        <div className="relative w-full h-40">
+                          <Image src={project.image} alt={project.title} fill className="object-cover" />
+                        </div>
+                      ) : (
+                        <div className="h-40 bg-white/5 flex items-center justify-center text-white/60 text-sm">
+                          No preview
+                        </div>
+                      )}
+            
 
               <div className="p-6">
                 <h3 className="text-xl font-medium text-white mb-3">{project.title}</h3>

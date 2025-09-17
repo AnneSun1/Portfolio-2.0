@@ -17,19 +17,26 @@ export default function Header() {
     <header className="relative z-20 flex items-center justify-between p-4 md:p-6">
       {/* Logo */}
       <div className="flex items-center">
-        <svg
-          fill="currentColor"
-          viewBox="0 0 147 70"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          className="size-8 md:size-10 translate-x-[-0.5px] text-white"
-        >
-          <path d="M56 50.2031V14H70V60.1562C70 65.5928 65.5928 70 60.1562 70C57.5605 70 54.9982 68.9992 53.1562 67.1573L0 14H19.7969L56 50.2031Z"></path>
-          <path d="M147 56H133V23.9531L100.953 56H133V70H96.6875C85.8144 70 77 61.1856 77 50.3125V14H91V46.1562L123.156 14H91V0H127.312C138.186 0 147 8.81439 147 19.6875V56Z"></path>
-        </svg>
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="currentColor"
+  viewBox="0 0 24 24"
+  aria-hidden="true"
+  className="size-8 md:size-10 text-black-500"
+>
+  <path
+    fillRule="evenodd"
+    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+       4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 
+       14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 
+       3.78-3.4 6.86-8.55 11.54L12 21.35z"
+    clipRule="evenodd"
+  />
+</svg>
+
       </div>
 
-      <nav className="hidden md:flex items-center space-x-2 border rounded-full py-2 px-4">
+      <nav className="hidden md:flex items-center space-x-2">
         <button
           onClick={() => scrollToSection("about")}
           className="text-white/80 hover:text-white text-xs font-light px-3 py-2 rounded-full hover:bg-white/10 transition-all duration-200"

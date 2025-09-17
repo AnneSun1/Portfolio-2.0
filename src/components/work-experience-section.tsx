@@ -7,7 +7,7 @@ export default function WorkExperienceSection() {
         company: "Geesehacks",
         period: "Aug 2025 - Present",
         description:
-          "Led development of scalable web applications using React and Node.js. Mentored junior developers and implemented best practices for code quality.",
+          "Developing the GeeseHacks 2026 webpage, internal tools and judging platform",
         technologies: ["React Native", "FastAPI", "PostgreSQL", "SQLAlchemy", "React", "TypeScript", "Vue.js", "AWS"],
       },
       {
@@ -31,7 +31,7 @@ export default function WorkExperienceSection() {
       company: "University of Toronto - EASI",
       period: "Sep 2024 - Dec 2024",
       description:
-        "Built and maintained multiple client projects from conception to deployment. Collaborated with design teams to create user-friendly interfaces.",
+        "Developed 6 backend microservices to replace an on-premises data service that manages 60,000+ student records, optimizing query performance and reducing codebase size using Express.js, SQL and TypeScript",
       technologies: ["Node.js", "Express.js", "SQL"],
     },
 
