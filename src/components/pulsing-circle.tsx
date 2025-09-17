@@ -2,8 +2,12 @@
 
 import { PulsingBorder } from "@paper-design/shaders-react"
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 export default function PulsingCircle() {
+  const [isMounted, setIsMounted] = useState(false)
+  useEffect(() => setIsMounted(true), [])
+  if (!isMounted) return null
   return (
     <div className="absolute bottom-8 right-8 z-30">
       <div className="relative w-20 h-20 flex items-center justify-center">
@@ -46,7 +50,7 @@ export default function PulsingCircle() {
           <defs>
             <path id="circle" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
           </defs>
-          <text className="text-sm fill-white/80 instrument">
+          <text className="text-sm fill-white/80 instrument" suppressHydrationWarning>
             <textPath href="#circle" startOffset="0%">
             Welcome • Welcome • Welcome • Welcome •
             </textPath>

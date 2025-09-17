@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export default function AboutSection() {
   return (
     <div className="container mx-auto px-8 py-20 max-w-4xl">
@@ -33,11 +35,17 @@ export default function AboutSection() {
         </div>
 
         <div className="relative">
-          <div className="w-80 h-80 mx-auto bg-gradient-to-br from-white/10 to-white/5 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-            <div className="w-60 h-60 bg-gradient-to-br from-white/20 to-white/10 rounded-full flex items-center justify-center">
-              <span className="text-6xl">👋</span>
-            </div>
-          </div>
+        <div className="w-80 h-80 mx-auto bg-gradient-to-br from-white/10 to-white/5 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+        <div className="w-60 h-60 bg-gradient-to-br from-white/20 to-white/10 rounded-full flex items-center justify-center overflow-hidden">
+            <Image
+            src="/66-yawn.jpg"  // place your image in /public/me.jpg
+            alt="Profile picture"
+            width={240}     // same size as container
+            height={240}
+            className="object-cover rounded-full"
+            />
+        </div>
+        </div>
         </div>
       </div>
     </div>

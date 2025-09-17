@@ -12,8 +12,10 @@ interface ShaderBackgroundProps {
 export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isActive, setIsActive] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
     const handleMouseEnter = () => setIsActive(true)
     const handleMouseLeave = () => setIsActive(false)
 
@@ -32,7 +34,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   }, [])
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-black relative overflow-hidden">
+    <div ref={containerRef} className="min-h-screen relative overflow-hidden">
       {/* SVG Filters */}
       <svg className="absolute inset-0 w-0 h-0">
         <defs>
@@ -61,22 +63,25 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
         </defs>
       </svg>
 
-      {/* Background Shaders */}
-      <MeshGradient
-        className="absolute inset-0 w-full h-full"
-        colors={["#000000", "#8b5cf6", "#ffffff", "#1e1b4b", "#4c1d95"]}
-        speed={0.3}
-        // backgroundColor="#000000"
-      />
-      <MeshGradient
-        className="absolute inset-0 w-full h-full opacity-60"
-        colors={["#000000", "#ffffff", "#8b5cf6", "#000000"]}
-        speed={0.2}
-        // wireframe="true"
-        // backgroundColor="transparent"
-      />
+      {/* Background Shaders - Amber ↔ Purple ↔ Pink (client-only to avoid hydration mismatch) */}
+      {isMounted && (
+        <>
+          <MeshGradient
+            className="absolute inset-0 w-full h-full"
+            colors={["#000000", "#3b0764", "#ec4899", "#f59e0b", "#1e1b4b"]}
+            speed={0.28}
+          />
+          <MeshGradient
+            className="absolute inset-0 w-full h-full opacity-60"
+            colors={["#000000", "#8b5cf6", "#ec4899", "#f59e0b"]}
+            speed={0.2}
+          />
+        </>
+      )}
 
-      {children}
+      {/* <div className="relative z-10 text-white"> */}
+        {children}
+      {/* </div> */}
     </div>
   )
 }

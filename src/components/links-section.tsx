@@ -37,11 +37,18 @@ export default function LinksSection() {
     },
     {
       name: "Resume",
-      url: "https://twitter.com",
+      url: "/external_w26_resume.pdf",
       icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            >
+            <path d="M6 2a2 2 0 00-2 2v16c0 1.103.897 2 2 2h12a2 2 0 002-2V8l-6-6H6zm7 1.414L18.586 9H13V3.414zM8 13h8v2H8v-2zm0 4h8v2H8v-2z" />
         </svg>
+
       ),
     },
   ]
@@ -73,7 +80,7 @@ export default function LinksSection() {
       </div>
 
       <div className="text-center mt-16">
-        <p className="text-white/60 text-sm">© 2024 My Portfolio. Built with Next.js and lots of ☕</p>
+        <p className="text-white/60 text-sm">© 2025 Anne's Portfolio. Built with Next.js, Vercel and lots of ☕</p>
       </div>
     </div>
   )

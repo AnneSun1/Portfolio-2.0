@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "Personal Portfolio",
   description: "Welcome to my personal portfolio website",
   generator: "Next.js",
+  icons: {
+    icon: "/heart.svg"
+  }
 }
 
 export default function RootLayout({

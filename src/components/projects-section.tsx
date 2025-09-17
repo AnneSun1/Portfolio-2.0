@@ -45,7 +45,12 @@ export default function ProjectsSection() {
 
   return (
     <div className="container mx-auto px-8 py-20 max-w-6xl">
-      {/* header … */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
+          <span className="font-medium italic instrument">My</span> Projects
+        </h2>
+        <div className="w-20 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mx-auto"></div>
+      </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div key={index} className="group">
